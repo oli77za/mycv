@@ -1,0 +1,35 @@
+@import "../../sass/colours.scss";
+.section_title {
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    color: $darkBlue;
+    .bar {
+        position: absolute;
+        display: inline-block;
+        top: 8px;
+        bottom: 8px;
+        width: 4px;
+        background-color: $darkBlue;
+        transform: rotate(10deg);
+        &.end {
+            right: 0;
+        }
+    }
+    .content {
+        width: 100%;
+        margin: 0 28px;
+        display: inline-block;
+        h2 {
+            display: block;
+        }
+
+    }
+    &.dark_background {
+        color: $lightGrey;
+        .bar {
+            background-color: $lightGrey;
+        }
+    }
+}
