@@ -1,0 +1,24 @@
+<template name="menu">
+<!-- menu -->
+<div class="menu">
+    <ul>
+        {{#each item in items}}
+        <li>
+        {{>menu_item item}}
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<!-- menu -->
+</template>
+
+<template name="menu_item">
+<!-- menu_item -->
+<div class="menu_item">
+    <a href={{href}}>
+        <div class="label"><span>{{label}}</span></div>
+        <div class="menu_button"><div></div></div>
+    </a>
+</div>
+<!-- menu_item -->
+</template>

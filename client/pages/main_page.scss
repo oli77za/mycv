@@ -1,16 +1,8 @@
 @import "../sass/colours.scss";
 .main_page {
     .page_wrapper {
-        section {
-            div {
-                p {
-                    max-width: 60%;
-                    display: inline-block;
-                }
-            }
-        }
-        section.experience {
-            background-color: $darkBlue;
+        >section {
+            padding: 16px 32px;
         }
     }
 }

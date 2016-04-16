@@ -1,0 +1,26 @@
+@import "../../sass/colours.scss";
+.skills_section {
+    color: $lightGrey;
+    background-image: url('/terminal.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    ul {
+        list-type: none;
+    }
+    li {
+        display: inline-block;
+        transition: transform .8s ease;
+        &:nth-child(even) {
+            transform: translate(0, -50px);
+            &.slide_in {
+                transform: translate(0, 0);
+            }
+        }
+        &:nth-child(odd) {
+            transform: translate(0, 50px);
+            &.slide_in {
+                transform: translate(0, 0);
+            }
+        }
+    }
+}

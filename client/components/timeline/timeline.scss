@@ -1,0 +1,68 @@
+@import "../../sass/colours.scss";
+.timeline {
+    position: relative;
+    margin: auto;
+    .item_row {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        width: 632px;
+        margin: 12px auto;
+        .timeline_period {
+            width: 300px;
+            .period_wrapper {
+                margin: 8px 12px;
+            }
+        }
+        .timeline_summary {
+            width: 300px;
+            transform: translate3d(-200px, 0 ,0);
+            opacity: .2;
+            transition: transform .8s ease, opacity .8s ease;
+            .summary_wrapper {
+                padding: 8px;
+                border: $darkBlue solid 4px;
+            }
+            &.slide_in {
+                transform: translate3d(0, 0 ,0);
+                opacity: 1;
+            }
+        }
+        .separator {
+            height: 32px;
+            width: 32px;
+            background-color: $darkBlue;
+            margin: 0 8px;
+        }
+        &:nth-child(even) {
+            .summary_wrapper {
+                border-right: none;
+            }
+        }
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+            .timeline_summary {
+                transform: translate3d(200px, 0 ,0);
+                &.slide_in {
+                    transform: translate3d(0, 0 ,0);
+                    opacity: 1;
+                }
+            }
+            .summary_wrapper {
+                border-left: none;
+            }
+            .timeline_period {
+                text-align: end;
+            }
+        }
+    }
+    &:before {
+        position:absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 4px;
+        background-color: $darkBlue;
+        content: "";
+    }
+}

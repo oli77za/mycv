@@ -1,0 +1,32 @@
+@import "../../sass/colours.scss";
+.skill_button {
+    position: relative;
+    background-color: $lightBlue;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    color: $darkBlue;
+    .more_info {
+        position: absolute;
+        max-width: 300px;
+        top: 70px;
+        left: 70px;
+        padding: 16px;
+        border: $lightBlue solid 1px;
+        background-color: $darkBlue;
+        color: $lightBlue;
+        line-height: 1;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+    &:hover {
+        .more_info {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

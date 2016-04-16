@@ -1,12 +1,12 @@
 <template name="section_title">
-    <!-- section_title -->
-        <div class=section_title>
-            <div class="bar"></div>
-            <div class="content">
-                <h2>{{label}}</h2>
-                <p>{{description}}</p>
-            </div>
-            <div class="bar end"></div>
-        </div>
-    <!-- section_title -->
+<!-- section_title -->
+<div class="section_title {{theme}}">
+    <div class="bar"></div>
+    <div class="content">
+        <h2>{{#if icon}}<span class="fa fa-{{icon}}"></span> {{/if}}{{label}}</h2>
+        <p>{{description}}</p>
+    </div>
+    <div class="bar end"></div>
+</div>
+<!-- section_title -->
 </template>

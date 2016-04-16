@@ -1,0 +1,37 @@
+<template name="timeline">
+<!-- timeline -->
+<div class="timeline">
+    <h2>{{label}}</h2>
+    {{#each item in items}}
+    <div class="item_row">
+        {{>timeline_summary item}}
+        <div class="separator"></div>
+        {{>timeline_period item}}
+    </div>
+    {{/each}}
+
+</div>
+<!-- timeline -->
+</template>
+
+<template name="timeline_summary">
+<!-- timeline_summary -->
+<div class="timeline_summary">
+    <div class="summary_wrapper">
+        <h3>{{title}}</h3>
+        <h4>{{company}}</h4>
+        <p>{{description}}</p>
+    </div>
+</div>
+<!-- timeline_summary -->
+</template>
+
+<template name="timeline_period">
+<!-- timeline_period -->
+<div class="timeline_period">
+    <div class="period_wrapper">
+        {{period}}
+    </div>
+</div>
+<!-- timeline_period -->
+</template>

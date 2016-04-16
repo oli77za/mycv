@@ -1,0 +1,15 @@
+<template name="skills_section">
+<!-- skills_section -->
+<section class="skills_section">
+    {{>section_title icon="cogs" label="skills" theme="dark_bg" }}
+    {{#each category in categories}}
+    <h3>{{category}}</h3>
+    <ul>
+        {{#each skill in getSkills  category}}
+        <li>{{>skill_button skill}}</li>
+        {{/each}}
+    </ul>
+    {{/each}}
+</section>
+<!-- skills_section -->
+</template>
